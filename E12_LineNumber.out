@@ -1,0 +1,34 @@
+34: } ///:~
+33:   }
+32:     out.close();
+31:       out.println(line-- + ": " + it.previous());
+30:         list.listIterator(list.size()); it.hasPrevious();)
+29:     for(ListIterator<String> it =
+28:     int line = list.size();
+27:     // We need to count backwards...
+26:           new FileWriter(args[1])));
+25:         new BufferedWriter(
+24:       new PrintWriter(
+23:     PrintWriter out =
+22:     List<String> list = E07_FileIntoList.read(args[0]);
+21:     }
+20:       return;
+19:         "Usage: java E12_LineNumber infile outfile");
+18:       System.err.println(
+17:     if(args.length != 2) {
+16:   throws java.io.IOException {
+15:   public static void main(String[] args)
+14: public class E12_LineNumber {
+13: 
+12: import java.util.*;
+11: import java.io.*;
+10: package io;
+9:  ***********************************************/
+8:  * to the file.
+7:  * attempt to use the "LineNumber" classes), out
+6:  * LinkedList, along with line numbers (do not
+5:  * you can write text into it. Write the lines in the
+4:  * Modify Exercise 8 to also open a text file so
+3: /****************** Exercise 12 *****************
+2: // {Args: E12_LineNumber.java E12_LineNumber.out}
+1: //: io/E12_LineNumber.java

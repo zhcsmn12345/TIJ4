@@ -1,0 +1,30 @@
+1: //: io/E13_CountLines.java
+2: /****************** Exercise 13 *****************
+3:  * Modify BasicFileOutput.java so that it uses
+4:  * LineNumberReader to keep track of the line
+5:  * count. Note that it's much easier to just keep
+6:  * track programmatically.
+7:  ***********************************************/
+8: package io;
+9: import java.io.*;
+10: 
+11: public class E13_CountLines {
+12:   static String file = "E13_CountLines.out";
+13:   public static void main(String[] args)
+14:   throws IOException {
+15:     // LineNumberReader is inherited from
+16:     // BufferedReader so we don't need to
+17:     // explicitly buffer it:
+18:     LineNumberReader in =
+19:       new LineNumberReader(
+20:         new FileReader("E13_CountLines.java"));
+21:     PrintWriter out = new PrintWriter(
+22:       new BufferedWriter(new FileWriter(file)));
+23:     String s;
+24:     while((s = in.readLine()) != null )
+25:       out.println(in.getLineNumber() + ": " + s);
+26:     out.close();
+27:     // Show the stored file:
+28:     System.out.println(E07_FileIntoList.read(file));
+29:   }
+30: } /* (Execute to see output) *///:~
